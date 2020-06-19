@@ -1,3 +1,3 @@
 # Vidly
 
-Vidly - an ASP.NET MVC web application
+Vidly - an ASP.NET MVC 5 web application
