@@ -7,9 +7,9 @@
 
 <h2>@Model.Name</h2>
 <ul>
-    <li>Тип подписки: @Model.MembershipType.Name</li>
+    <li>Membership Type: @Model.MembershipType.Name</li>
     @if (Model.Birthdate.HasValue)
     {
-        <li>Дата рождения: @Model.Birthdate.Value.ToShortDateString()</li>
+        <li>Birthdate: @Model.Birthdate.Value.ToShortDateString()</li>
     }
 </ul>
