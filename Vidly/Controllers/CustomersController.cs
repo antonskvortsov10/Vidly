@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure.MappingViews;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -32,6 +33,15 @@ namespace Vidly.Controllers
             };
 
             return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
         }
 
         // GET: Customers
