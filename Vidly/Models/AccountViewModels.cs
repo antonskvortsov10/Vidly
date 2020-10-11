@@ -56,12 +56,12 @@ namespace Vidly.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Email is required")]
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
@@ -72,16 +72,16 @@ namespace Vidly.Models
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Driving License is required")]
         [Display(Name = "Driving License")]
         public string DrivingLicense { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Email is required")]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Password is required")]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
@@ -92,7 +92,7 @@ namespace Vidly.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Phone is required")]
         [StringLength(50)]
         public string Phone { get; set; }
     }

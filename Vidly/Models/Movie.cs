@@ -10,14 +10,14 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Name is required")]
         [StringLength(255)]
         public string Name { get; set; }
 
         public Genre Genre { get; set; }
 
         [Display(Name = "Genre")]
-        [Required]
+        [Required(ErrorMessage = "Genre is required")]
         public byte GenreId { get; set; }
 
         public DateTime DateAdded { get; set; }

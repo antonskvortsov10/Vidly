@@ -10,10 +10,10 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Customer is required")]
         public Customer Customer { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Movie is required")]
         public Movie Movie { get; set; }
 
         public DateTime DateRented { get; set; }

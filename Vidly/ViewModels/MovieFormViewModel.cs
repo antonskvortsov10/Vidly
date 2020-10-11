@@ -15,21 +15,21 @@ namespace Vidly.ViewModels
 
         public int? Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Name is required")]
         [StringLength(255)]
         public string Name { get; set; }
 
         [Display(Name = "Genre")]
-        [Required]
+        [Required(ErrorMessage = "Genre is required")]
         public byte? GenreId { get; set; }
 
         [Display(Name = "Release Date")]
-        [Required]
+        [Required(ErrorMessage = "Release Date is required")]
         public DateTime? ReleaseDate { get; set; }
 
         [Display(Name = "Number in Stock")]
         [Range(1, 20)]
-        [Required]
+        [Required(ErrorMessage = "Number in Stock is required")]
         public byte? NumberInStock { get; set; }
 
         public string Title
